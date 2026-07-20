@@ -1,0 +1,27 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Data files (keep placeholder only)
+data/*.csv
+!data/.gitkeep
+
+# OS / editor metadata
+.DS_Store
+.vscode/
+.idea/
+.cursor/
+
+# Logs and temporary outputs
+*.log
+*.out
+*.tmp
+reports/*.html
+reports/*.png
