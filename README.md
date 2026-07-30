@@ -3,6 +3,8 @@
 ## Project Overview
 This project applies unsupervised topic modeling to BBC news articles to uncover latent themes and compare two widely used approaches: Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF). The workflow includes text preprocessing, token cleaning, topic coherence tuning, model training, and interactive topic visualization.
 
+> **Repository scope:** This repository currently contains the BBC News topic-modeling project completed during the Elevvo NLP Engineering internship. Its public description and documentation reflect this implemented project; additional internship work will be added only as it is completed and documented.
+
 ## Business Objective
 The goal is to turn a large collection of news content into structured insights that help identify recurring topics, monitor narrative themes, and support downstream NLP or content analytics workflows.
 
