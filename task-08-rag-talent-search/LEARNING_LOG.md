@@ -35,7 +35,7 @@ embeddings, FAISS, or an LLM.
 
 ### Not started
 
-- Candidate-level grouping and ranking
+- Formal retrieval evaluation
 - LLM evaluation
 - Streamlit UI
 
@@ -181,6 +181,64 @@ a percentage probability.
 
 ### Current boundary
 
-Chunk search is ready and remains entirely in memory. Candidate aggregation,
-candidate ranking, index persistence/loading, LLM evaluation, bias checks, and
-the Streamlit interface have not started.
+At this historical checkpoint, chunk search was ready in memory while candidate
+aggregation, candidate ranking, index persistence/loading, LLM evaluation, bias
+checks, and the Streamlit interface had not started.
+
+## Phase 1, Step 6: Candidate-level aggregation and ranking
+
+### Goal
+
+Convert chunk-level FAISS results into a ranked list of distinct candidates
+without allowing candidates with more chunks to receive an unfair score boost.
+
+### Baseline ranking rule
+
+The pipeline retrieves more chunks than the number of candidates it will
+return. It then groups those chunks using anonymous `candidate_id` metadata.
+
+For the first transparent baseline:
+
+```text
+candidate score = highest chunk similarity for that candidate
+```
+
+This is best-chunk scoring. A candidate with ten medium-quality chunks cannot
+outrank another candidate solely because they have more text. It also avoids
+inventing untested weights for work experience, skills, education, or other
+sections.
+
+The candidate keeps the strongest evidence chunk from up to three distinct
+sections. Evidence supports later explanation but does not add ranking points.
+
+### Test-first cycle
+
+The tests first failed because `talent_search.retrieval` did not exist. The
+implementation then had to demonstrate that it:
+
+- returns unique candidates ordered by their best chunk;
+- does not let multiple chunks inflate a candidate score;
+- keeps only the strongest evidence chunk per section;
+- rejects invalid candidate, evidence, and fetch limits;
+- works with the real FAISS adapter rather than only a mocked search result.
+
+### Verified real run
+
+For `junior data analyst with SQL and Tableau`, the pipeline retrieved 50 chunks
+and returned three distinct candidates:
+
+1. candidate score `0.5588`, with work experience, summary, and profile evidence;
+2. candidate score `0.5485`, with work experience, summary, and skills evidence;
+3. candidate score `0.5344`, with work experience evidence available in the top
+   50 chunks.
+
+The scores were descending and all three candidate IDs were unique. This is a
+functional verification of aggregation, not proof that the ranking is accurate
+for real recruiters. That requires a retrieval evaluation set with expected
+candidates or relevant evidence.
+
+### Current boundary
+
+Distinct candidate ranking is ready in memory. Formal retrieval evaluation,
+complete evidence assembly for shortlisted resumes, index persistence/loading,
+LLM evaluation, bias checks, and the Streamlit interface have not started.
