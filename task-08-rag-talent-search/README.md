@@ -6,19 +6,21 @@ on the next step.
 
 ## Current checkpoint
 
-Phase 1 is complete through embeddings:
+Phase 1 is complete through exact FAISS chunk search:
 
 1. Load and validate the JSONL dataset as raw LangChain `Document` objects.
 2. Replace direct identifiers and remove unsafe metadata.
 3. Divide each resume by meaning, then recursively split oversized sections.
 4. Convert every privacy-safe chunk into a normalized local embedding.
+5. Index the embeddings in FAISS and return the closest LangChain documents.
 
 The verified dataset run produced 1,956 chunks from 220 resumes. The local
 `sentence-transformers/all-MiniLM-L6-v2` model produced a `1956 x 384` embedding
 matrix in memory.
 
-FAISS indexing has deliberately not started. No vector matrix or resume content
-is written to disk by the current code.
+The verified FAISS run stores 1,956 vectors with 384 dimensions in an exact
+`IndexFlatIP` index. The index remains in memory; no vector matrix, FAISS index,
+or resume content is written to disk by the current code.
 
 ## Pipeline so far
 
@@ -32,7 +34,9 @@ JSONL file
   -> small section Documents
   -> HuggingFaceEmbeddings
   -> 384-number meaning vectors (in memory)
-  -> STOP: FAISS is the next checkpoint
+  -> exact FAISS index
+  -> closest resume chunks + cosine similarity scores
+  -> STOP: candidate-level grouping and ranking is the next checkpoint
 ```
 
 The section splitter starts with `chunk_size=1000` characters and
@@ -44,10 +48,11 @@ values. Retrieval evaluation later will tell us whether to adjust them.
 ```python
 from pathlib import Path
 
-from talent_search.embeddings import create_local_embeddings, embed_documents
+from talent_search.embeddings import create_local_embeddings
 from talent_search.loaders import ResumeJsonlLoader
 from talent_search.privacy import sanitize_resume_document
 from talent_search.splitting import ResumeSectionSplitter
+from talent_search.vector_store import build_faiss_index, search_faiss_index
 
 DATASET_PATH = Path("path/to/Entity Recognition in Resumes.json")
 
@@ -56,8 +61,18 @@ safe_documents = [sanitize_resume_document(doc) for doc in raw_documents]
 chunks = ResumeSectionSplitter().split_documents(safe_documents)
 
 embedding_model = create_local_embeddings()
-vectors = embed_documents(chunks, embedding_model)
+vector_store = build_faiss_index(chunks, embedding_model)
+results = search_faiss_index(
+    vector_store,
+    "junior data analyst with SQL and Tableau",
+    k=10,
+)
 ```
+
+`FaissVectorStore` implements LangChain Core's `VectorStore` interface directly
+on top of `faiss-cpu`. This avoids depending on the archived
+`langchain-community` package while keeping LangChain `Document` and
+`Embeddings` compatibility.
 
 ## Install and test
 

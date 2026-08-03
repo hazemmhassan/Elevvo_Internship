@@ -35,8 +35,7 @@ embeddings, FAISS, or an LLM.
 
 ### Not started
 
-- FAISS indexing
-- Retrieval
+- Candidate-level grouping and ranking
 - LLM evaluation
 - Streamlit UI
 
@@ -128,5 +127,60 @@ finite and every vector norm was 1. Nothing was persisted.
 
 ### Current boundary
 
-Embeddings are ready. FAISS installation, indexing, persistence, and retrieval
-have not started and require the next approval checkpoint.
+Embeddings are ready for a vector index. At this historical checkpoint, FAISS
+had not started and required the next approval.
+
+## Phase 1, Step 5: Exact FAISS chunk search
+
+### Goal
+
+Store the 1,956 embedding vectors in a searchable index and recover the original
+privacy-safe LangChain chunks for a natural-language recruiter query.
+
+### Why an exact flat index
+
+This dataset is small enough to compare a query against every stored vector.
+`IndexFlatIP` therefore gives exact results without training, clustering, or an
+approximation tradeoff. Both stored vectors and query vectors are normalized,
+so the inner product returned by FAISS is cosine similarity: larger scores mean
+closer semantic meaning.
+
+### LangChain and FAISS responsibilities
+
+- `faiss-cpu` stores normalized `float32` vectors and returns vector positions.
+- `FaissVectorStore` implements LangChain Core's `VectorStore` interface.
+- A unique ID connects each vector position to its anonymous candidate, source
+  row, and chunk index.
+- The document map recovers the matching `Document` text and safe metadata.
+
+The adapter is implemented in the project instead of using
+`langchain-community`, which is sunset and archived. This keeps the integration
+small, visible, and based on maintained LangChain Core abstractions.
+
+### Test-first cycle
+
+The tests first failed because `talent_search.vector_store` did not exist. The
+minimal implementation then had to demonstrate observable behavior:
+
+- index every privacy-safe chunk;
+- return the SQL chunk for a SQL query with its metadata and score;
+- reject raw documents, empty input, duplicate chunk identities, blank queries,
+  and non-positive result counts.
+
+### Verified real run
+
+The full pipeline produced an exact 384-dimensional index containing all 1,956
+chunks. For `junior data analyst with SQL and Tableau`, the top 10 chunks
+represented seven distinct anonymous candidates and returned cosine scores from
+`0.5588` down to `0.4711`.
+
+Several candidates appeared through more than one section. This proves why the
+next layer must group chunks by `candidate_id` before ranking complete
+candidates. A FAISS score measures semantic closeness, not hiring suitability or
+a percentage probability.
+
+### Current boundary
+
+Chunk search is ready and remains entirely in memory. Candidate aggregation,
+candidate ranking, index persistence/loading, LLM evaluation, bias checks, and
+the Streamlit interface have not started.
