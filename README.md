@@ -1,42 +1,63 @@
-# BBC News Unsupervised Topic Modeling (LDA vs NMF)
+# Elevvo NLP Engineering Internship Projects
 
-## Project Overview
-This project applies unsupervised topic modeling to BBC news articles to uncover latent themes and compare two widely used approaches: Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF). The workflow includes text preprocessing, token cleaning, topic coherence tuning, model training, and interactive topic visualization.
+This repository contains two completed, independent NLP projects from the
+Elevvo internship. Each project has its own source code, dependencies, setup
+instructions, data policy, and runnable entry point.
 
-> **Repository scope:** This repository currently contains the BBC News topic-modeling project completed during the Elevvo NLP Engineering internship. Its public description and documentation reflect this implemented project; additional internship work will be added only as it is completed and documented.
+## Projects
 
-## Business Objective
-The goal is to turn a large collection of news content into structured insights that help identify recurring topics, monitor narrative themes, and support downstream NLP or content analytics workflows.
+| Task | Project | Main techniques | Status |
+|---|---|---|---|
+| 05 | [BBC News Topic Modeling](task-05-topic-modeling/) | spaCy, LDA, NMF, coherence tuning, pyLDAvis | Complete |
+| 08 | [RAG-Powered Talent Search](task-08-rag-talent-search/) | LangChain, local embeddings, FAISS, hybrid retrieval, optional OpenAI evaluation, Streamlit | Complete |
 
-## Key Features
-- Linguistic preprocessing and text cleaning for news articles
-- Token-based document representation suitable for topic modeling
-- Coherence-based tuning for selecting an appropriate number of topics
-- Comparative LDA vs NMF topic extraction
-- Interactive topic exploration using pyLDAvis
-- Exportable visual artifacts such as coherence curves and topic dashboards
+## Independent setup
 
-## Installation
-Create and activate a Python environment, then install the required dependencies:
+The projects do not share an environment or a dependency file. Enter the
+project you want to run and follow its README.
 
-```bash
+```powershell
+# Task 05
+cd task-05-topic-modeling
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+
+# Or start separately with Task 08
+cd task-08-rag-talent-search
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements-dev.txt
 ```
 
-## Usage
-Run the full pipeline from the project root:
+The datasets are intentionally excluded from Git because they are third-party
+source data. Each project README explains the expected local data path and how
+to run its pipeline.
 
-```bash
-python main.py
+## Repository structure
+
+```text
+Elevvo_Internship/
+├── task-05-topic-modeling/
+│   ├── data/
+│   ├── reports/
+│   ├── src/
+│   ├── tests/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── requirements-dev.txt
+│   └── README.md
+└── task-08-rag-talent-search/
+    ├── evaluation/
+    ├── output/
+    ├── scripts/
+    ├── src/
+    ├── tests/
+    ├── streamlit_app.py
+    ├── requirements.txt
+    ├── requirements-dev.txt
+    └── README.md
 ```
 
-This will:
-1. Load the BBC news dataset
-2. Preprocess the text data
-3. Train topic models
-4. Export reports and visualizations to the reports folder
-
-## Visual Results
-The repository includes a coherence curve report here:
-
-![Coherence Score Curve](reports/coherence_score_curve.png)
+Generated models, private vector indexes, local environments, and third-party
+datasets are not shared between projects or committed to the repository.

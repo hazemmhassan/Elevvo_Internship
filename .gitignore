@@ -9,10 +9,6 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 
-# Data files (keep placeholder only)
-data/*.csv
-!data/.gitkeep
-
 # OS / editor metadata
 .DS_Store
 .vscode/
@@ -23,5 +19,4 @@ data/*.csv
 *.log
 *.out
 *.tmp
-reports/*.html
-reports/*.png
+.env

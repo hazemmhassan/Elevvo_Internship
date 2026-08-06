@@ -10,8 +10,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import pyLDAvis
 from gensim import corpora
 from gensim.models import CoherenceModel, LdaModel
+from scipy.spatial.distance import pdist, squareform
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
@@ -159,10 +161,25 @@ def export_pyldavis(
     """Generate and save an interactive pyLDAvis dashboard."""
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    vis = gensim_vis.prepare(lda_model, corpus, dictionary)
-    gensim_vis.save_html(vis, str(output_path))
+    vis = gensim_vis.prepare(lda_model, corpus, dictionary, mds=_stable_pcoa)
+    pyLDAvis.save_html(vis, str(output_path))
     print(f"Saved pyLDAvis dashboard to {output_path}")
     return output_path
+
+
+def _stable_pcoa(distributions: Any) -> np.ndarray:
+    """Project Jensen-Shannon distances with real-valued classical MDS."""
+
+    distance_matrix = squareform(
+        pdist(np.asarray(distributions, dtype=np.float64), metric="jensenshannon")
+    )
+    count = distance_matrix.shape[0]
+    centering = np.eye(count) - np.ones((count, count)) / count
+    gram_matrix = -centering.dot(distance_matrix**2).dot(centering) / 2
+    eigenvalues, eigenvectors = np.linalg.eigh(gram_matrix)
+    selected = np.argsort(eigenvalues)[::-1][:2]
+    positive_eigenvalues = np.maximum(eigenvalues[selected], 0.0)
+    return eigenvectors[:, selected] * np.sqrt(positive_eigenvalues)
 
 
 def select_best_topic_count(topics: List[int], coherence_values: List[float]) -> int:
