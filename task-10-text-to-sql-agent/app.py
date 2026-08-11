@@ -46,7 +46,9 @@ with st.sidebar:
     st.code("Show revenue by country as a bar chart.")
 
 database_ready = DATABASE_PATH.exists()
-key_ready = bool(os.environ.get("OPENAI_API_KEY"))
+key_ready = bool(
+    os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+)
 
 if not database_ready:
     st.error(
@@ -54,7 +56,7 @@ if not database_ready:
         "`data/raw/Chinook_Sqlite.sqlite`."
     )
 if not key_ready:
-    st.warning("Set the `OPENAI_API_KEY` environment variable, then restart the app.")
+    st.warning("Set the `GEMINI_API_KEY` environment variable, then restart the app.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -109,17 +111,9 @@ if question:
             try:
                 run = run_text_to_sql_agent(question, DATABASE_PATH)
             except AgentProviderError as error:
-                error_text = str(error)
-                if "credit_balance_exhausted" in error_text or "no credits" in error_text:
-                    answer = (
-                        "The OpenAI API account has no credits available. Add API "
-                        "credit in the OpenAI Platform billing page, then try again."
-                    )
-                else:
-                    answer = f"The OpenAI request could not be completed: {error_text}"
                 assistant_message = {
                     "role": "assistant",
-                    "content": answer,
+                    "content": f"The Gemini request could not be completed: {error}",
                     "sql_attempts": (),
                     "chart": None,
                 }

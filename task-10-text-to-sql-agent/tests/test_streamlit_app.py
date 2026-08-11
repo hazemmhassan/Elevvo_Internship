@@ -6,7 +6,7 @@ from streamlit.testing.v1 import AppTest
 APP_PATH = Path(__file__).parents[1] / "app.py"
 
 
-def test_streamlit_app_loads_without_calling_openai():
+def test_streamlit_app_loads_without_calling_gemini():
     assert APP_PATH.exists(), "Streamlit app has not been implemented"
 
     app = AppTest.from_file(str(APP_PATH), default_timeout=10).run()

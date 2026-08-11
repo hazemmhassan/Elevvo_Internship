@@ -7,10 +7,10 @@ from pathlib import Path
 from langchain.agents import create_agent
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import AIMessage, ToolMessage
-from openai import OpenAIError
+from google.genai.errors import APIError
 
 from text_to_sql_agent.database_tools import create_database_tools
-from text_to_sql_agent.model import create_openai_model
+from text_to_sql_agent.model import create_gemini_model
 
 
 SYSTEM_PROMPT = """
@@ -61,7 +61,7 @@ def create_text_to_sql_agent(
     model: BaseChatModel | None = None,
 ):
     """Build a LangChain tool-calling agent for one SQLite database."""
-    active_model = model or create_openai_model()
+    active_model = model or create_gemini_model()
     return create_agent(
         model=active_model,
         tools=create_database_tools(database_path),
@@ -85,8 +85,8 @@ def run_text_to_sql_agent(
             {"messages": [{"role": "user", "content": question.strip()}]},
             config={"recursion_limit": 24},
         )
-    except OpenAIError as error:
-        raise AgentProviderError(f"OpenAI request failed: {error}") from error
+    except APIError as error:
+        raise AgentProviderError(f"Gemini request failed: {error}") from error
 
     sql_attempts: list[str] = []
     query_results: list[dict[str, object]] = []

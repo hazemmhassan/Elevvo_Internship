@@ -6,7 +6,7 @@ summarizes verified results. This is Elevvo NLP Internship **Task 10**.
 
 ## What the project demonstrates
 
-- LangChain agent and OpenAI function calling
+- LangChain agent and Gemini function calling
 - Database schema discovery before SQL generation
 - Natural-language-to-SQL translation
 - Automatic correction after invalid SQL
@@ -19,7 +19,7 @@ summarizes verified results. This is Elevvo NLP Internship **Task 10**.
 
 ```mermaid
 flowchart LR
-    Q["Manager's question"] --> L["OpenAI model"]
+    Q["Manager's question"] --> L["Gemini model"]
     L --> T["List tables"]
     T --> S["Inspect relevant schemas"]
     S --> G["Generate SQLite SELECT"]
@@ -63,7 +63,7 @@ task-10-text-to-sql-agent/
 |   |-- database.py                # Read-only SQLite operations
 |   |-- database_tools.py          # LangChain tools and chart tool
 |   |-- dataset.py                 # Download and schema validation
-|   |-- model.py                   # OpenAI model configuration
+|   |-- model.py                   # Gemini model configuration
 |   `-- sql_validation.py          # SQLGlot safety policy
 |-- tests/                         # Offline automated test suite
 |-- requirements.txt
@@ -81,17 +81,19 @@ python -m pip install -r requirements-dev.txt
 python scripts\download_chinook.py
 ```
 
-Create an OpenAI API key in the
-[OpenAI Platform](https://platform.openai.com/api-keys), then save it as a
-Windows user environment variable:
+Create a key in [Google AI Studio](https://aistudio.google.com/app/apikey)
+without upgrading the project to paid billing. Save it as a Windows user
+environment variable:
 
 ```powershell
-setx OPENAI_API_KEY "your_api_key_here"
+setx GEMINI_API_KEY "your_api_key_here"
 ```
 
-Close and reopen the terminal after `setx`. Never commit an API key. OpenAI API
-billing is separate from a ChatGPT subscription, so the API account must have
-available credit.
+Close and reopen the terminal after `setx`. Never commit an API key. The default
+`gemini-3.1-flash-lite` model has free input and output on the Gemini API Free
+Tier. Do not click **Upgrade to paid** or link a billing account if you want to
+keep the Google project free. Free-Tier prompts and responses may be used by
+Google to improve its products, so do not submit private or sensitive data.
 
 ## Run the application
 
@@ -126,9 +128,10 @@ error handling, and Streamlit startup.
 
 - **LangChain `create_agent`:** provides the model/tool loop and returns tool
   errors to the model for self-correction.
-- **`gpt-4o-mini`:** a low-cost model that supports function calling and is
-  sufficient for this focused portfolio task. Change `DEFAULT_MODEL` in
-  `src/text_to_sql_agent/model.py` to experiment with another supported model.
+- **`gemini-3.1-flash-lite`:** a Free-Tier model that supports function calling
+  and is designed for lightweight agentic work. Change `DEFAULT_MODEL` in
+  `src/text_to_sql_agent/model.py` only after checking the replacement model's
+  current Free-Tier availability and limits.
 - **Tools instead of direct access:** the model proposes actions; trusted Python
   code validates and performs them.
 - **Structured tool results:** errors, columns, rows, row counts, and truncation
@@ -147,7 +150,8 @@ error handling, and Streamlit startup.
 
 ## References
 
-- [OpenAI function calling](https://developers.openai.com/api/docs/guides/function-calling)
+- [Gemini 3.1 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)
 - [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)
-- [LangChain ChatOpenAI integration](https://docs.langchain.com/oss/python/integrations/chat/openai)
+- [LangChain ChatGoogleGenerativeAI integration](https://docs.langchain.com/oss/python/integrations/chat/google_generative_ai)
 - [Chinook sample database](https://github.com/lerocha/chinook-database)

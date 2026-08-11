@@ -1,7 +1,6 @@
 import json
 import sqlite3
 
-import httpx
 import pytest
 from langchain_core.language_models.fake_chat_models import FakeMessagesListChatModel
 from langchain_core.messages import AIMessage, ToolMessage
@@ -22,29 +21,30 @@ class RecordingToolCallingModel(FakeMessagesListChatModel):
         return super()._generate(messages, stop, run_manager, **kwargs)
 
 
-def test_create_openai_model_requires_api_key(monkeypatch):
+def test_create_gemini_model_requires_api_key(monkeypatch):
     try:
-        from text_to_sql_agent.model import create_openai_model
+        from text_to_sql_agent.model import create_gemini_model
     except ModuleNotFoundError:
         pytest.fail("model layer has not been implemented", pytrace=False)
 
-    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
 
-    with pytest.raises(RuntimeError, match="OPENAI_API_KEY"):
-        create_openai_model()
+    with pytest.raises(RuntimeError, match="GEMINI_API_KEY"):
+        create_gemini_model()
 
 
-def test_create_openai_model_uses_deterministic_defaults(monkeypatch):
+def test_create_gemini_model_uses_free_tier_defaults(monkeypatch):
     try:
-        from text_to_sql_agent.model import create_openai_model
+        from text_to_sql_agent.model import create_gemini_model
     except ModuleNotFoundError:
         pytest.fail("model layer has not been implemented", pytrace=False)
 
-    monkeypatch.setenv("OPENAI_API_KEY", "test-key-not-valid-for-network-calls")
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key-not-valid-for-network-calls")
 
-    model = create_openai_model()
+    model = create_gemini_model()
 
-    assert model.model_name == "gpt-4o-mini"
+    assert model.model == "gemini-3.1-flash-lite"
     assert model.temperature == 0
     assert model.max_retries == 2
 
@@ -157,13 +157,13 @@ def test_run_text_to_sql_agent_rejects_blank_question(tmp_path):
         agent_module.run_text_to_sql_agent("   ", tmp_path / "unused.sqlite")
 
 
-def test_run_text_to_sql_agent_wraps_openai_connection_errors(monkeypatch, tmp_path):
-    from openai import APIConnectionError
+def test_run_text_to_sql_agent_wraps_gemini_provider_errors(monkeypatch, tmp_path):
+    from google.genai.errors import APIError
     from text_to_sql_agent import agent as agent_module
 
     class FailingAgent:
         def invoke(self, *args, **kwargs):
-            raise APIConnectionError(request=httpx.Request("POST", "https://api.openai.com"))
+            raise APIError(503, {"error": {"message": "service unavailable"}})
 
     monkeypatch.setattr(
         agent_module,
@@ -171,5 +171,5 @@ def test_run_text_to_sql_agent_wraps_openai_connection_errors(monkeypatch, tmp_p
         lambda *args, **kwargs: FailingAgent(),
     )
 
-    with pytest.raises(agent_module.AgentProviderError, match="OpenAI request failed"):
+    with pytest.raises(agent_module.AgentProviderError, match="Gemini request failed"):
         agent_module.run_text_to_sql_agent("Show revenue", tmp_path / "unused.sqlite")
