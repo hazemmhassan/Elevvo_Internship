@@ -1,6 +1,6 @@
 # Elevvo NLP Engineering Internship Projects
 
-This repository contains two completed, independent NLP projects from the
+This repository contains four completed, independent NLP projects from the
 Elevvo internship. Each project has its own source code, dependencies, setup
 instructions, data policy, and runnable entry point.
 
@@ -9,7 +9,9 @@ instructions, data policy, and runnable entry point.
 | Task | Project | Main techniques | Status |
 |---|---|---|---|
 | 05 | [BBC News Topic Modeling](task-05-topic-modeling/) | spaCy, LDA, NMF, coherence tuning, pyLDAvis | Complete |
+| 06 | [Extractive Question Answering](task-06-question-answering/) | Hugging Face Transformers, SQuAD, answer-span extraction, EM/F1, Streamlit | Complete |
 | 08 | [RAG-Powered Talent Search](task-08-rag-talent-search/) | LangChain, local embeddings, FAISS, hybrid retrieval, optional OpenAI evaluation, Streamlit | Complete |
+| 10 | [Autonomous Text-to-SQL Agent](task-10-text-to-sql-agent/) | LangChain, Gemini, SQLGlot, read-only SQLite, self-correction, Streamlit | Complete |
 
 ## Independent setup
 
@@ -30,6 +32,9 @@ python -m venv .venv
 pip install -r requirements-dev.txt
 ```
 
+Tasks 06 and 10 follow the same independent-environment pattern. See each
+project README for its exact setup and run commands.
+
 The datasets are intentionally excluded from Git because they are third-party
 source data. Each project README explains the expected local data path and how
 to run its pipeline.
@@ -47,13 +52,31 @@ Elevvo_Internship/
 │   ├── requirements.txt
 │   ├── requirements-dev.txt
 │   └── README.md
-└── task-08-rag-talent-search/
-    ├── evaluation/
-    ├── output/
+├── task-06-question-answering/
+│   ├── reports/
+│   ├── scripts/
+│   ├── src/
+│   ├── tests/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── requirements-dev.txt
+│   └── README.md
+├── task-08-rag-talent-search/
+│   ├── evaluation/
+│   ├── output/
+│   ├── scripts/
+│   ├── src/
+│   ├── tests/
+│   ├── streamlit_app.py
+│   ├── requirements.txt
+│   ├── requirements-dev.txt
+│   └── README.md
+└── task-10-text-to-sql-agent/
+    ├── data/
     ├── scripts/
     ├── src/
     ├── tests/
-    ├── streamlit_app.py
+    ├── app.py
     ├── requirements.txt
     ├── requirements-dev.txt
     └── README.md

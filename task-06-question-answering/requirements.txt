@@ -1,0 +1,4 @@
+datasets==5.0.1
+streamlit==1.61.1
+torch==2.9.0
+transformers==5.15.0
