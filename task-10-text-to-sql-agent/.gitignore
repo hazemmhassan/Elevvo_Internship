@@ -1,0 +1,14 @@
+# Python environments and generated files
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Third-party database files are downloaded locally and are not committed
+data/raw/
+data/*.sqlite
