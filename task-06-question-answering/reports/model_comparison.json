@@ -1,0 +1,2827 @@
+{
+  "dataset": "SQuAD v1.1 validation",
+  "sample_size": 100,
+  "generated_at": "2026-08-19T01:17:08.166724Z",
+  "ranking_rule": "highest F1, then lowest mean latency",
+  "best_model": "deepset/minilm-uncased-squad2",
+  "models": [
+    {
+      "model_name": "distilbert/distilbert-base-cased-distilled-squad",
+      "count": 100,
+      "exact_match": 83.0,
+      "f1": 88.25,
+      "mean_latency_ms": 219.44049699697644,
+      "examples": [
+        {
+          "id": "56be4db0acb8001400a502ec",
+          "question": "Which NFL team represented the AFC at Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.6159074845862449,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 386.0456000547856
+        },
+        {
+          "id": "56be4db0acb8001400a502ed",
+          "question": "Which NFL team represented the NFC at Super Bowl 50?",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Carolina Panthers",
+            "Carolina Panthers",
+            "Carolina Panthers"
+          ],
+          "confidence": 0.7958122614353869,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 303.02330013364553
+        },
+        {
+          "id": "56be4db0acb8001400a502ee",
+          "question": "Where did Super Bowl 50 take place?",
+          "prediction": "Levi's Stadium in the San Francisco Bay Area at Santa Clara, California",
+          "references": [
+            "Santa Clara, California",
+            "Levi's Stadium",
+            "Levi's Stadium in the San Francisco Bay Area at Santa Clara, California."
+          ],
+          "confidence": 0.33942300580974916,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 319.1080999094993
+        },
+        {
+          "id": "56be4db0acb8001400a502ef",
+          "question": "Which NFL team won Super Bowl 50?",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.3756319818819165,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 293.2684998959303
+        },
+        {
+          "id": "56be4db0acb8001400a502f0",
+          "question": "What color was used to emphasize the 50th anniversary of the Super Bowl?",
+          "prediction": "gold",
+          "references": [
+            "gold",
+            "gold",
+            "gold"
+          ],
+          "confidence": 0.6890969533844782,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 283.9104998856783
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d1",
+          "question": "What was the theme of Super Bowl 50?",
+          "prediction": "golden anniversary",
+          "references": [
+            "\"golden anniversary\"",
+            "gold-themed",
+            "\"golden anniversary"
+          ],
+          "confidence": 0.14480503994952976,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 311.2311998847872
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d2",
+          "question": "What day was the game played on?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7",
+            "February 7, 2016"
+          ],
+          "confidence": 0.9455616995024059,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 348.77100004814565
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d3",
+          "question": "What is the AFC short for?",
+          "prediction": "Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference",
+          "references": [
+            "American Football Conference",
+            "American Football Conference",
+            "American Football Conference"
+          ],
+          "confidence": 0.46735390060569415,
+          "exact_match": 0.0,
+          "f1": 0.25,
+          "latency_ms": 310.22360012866557
+        },
+        {
+          "id": "56bea9923aeaaa14008c91b9",
+          "question": "What was the theme of Super Bowl 50?",
+          "prediction": "golden anniversary",
+          "references": [
+            "\"golden anniversary\"",
+            "gold-themed",
+            "gold"
+          ],
+          "confidence": 0.14480503994952976,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 330.26909991167486
+        },
+        {
+          "id": "56bea9923aeaaa14008c91ba",
+          "question": "What does AFC stand for?",
+          "prediction": "American Football Conference",
+          "references": [
+            "American Football Conference",
+            "American Football Conference",
+            "American Football Conference"
+          ],
+          "confidence": 0.5771837844197059,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 225.9205998852849
+        },
+        {
+          "id": "56bea9923aeaaa14008c91bb",
+          "question": "What day was the Super Bowl played on?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7",
+            "February 7, 2016"
+          ],
+          "confidence": 0.9472198074070768,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 207.59640005417168
+        },
+        {
+          "id": "56beace93aeaaa14008c91df",
+          "question": "Who won Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.5561252055285024,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 365.2089999523014
+        },
+        {
+          "id": "56beace93aeaaa14008c91e0",
+          "question": "What venue did Super Bowl 50 take place in?",
+          "prediction": "Levi's Stadium",
+          "references": [
+            "Levi's Stadium",
+            "Levi's Stadium",
+            "Levi's Stadium in the San Francisco Bay Area at Santa Clara"
+          ],
+          "confidence": 0.9783635793986001,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 273.74539989978075
+        },
+        {
+          "id": "56beace93aeaaa14008c91e1",
+          "question": "What city did Super Bowl 50 take place in?",
+          "prediction": "Santa Clara, California",
+          "references": [
+            "Santa Clara",
+            "Santa Clara",
+            "Santa Clara"
+          ],
+          "confidence": 0.34218074247490904,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 173.1718999799341
+        },
+        {
+          "id": "56beace93aeaaa14008c91e2",
+          "question": "If Roman numerals were used, what would Super Bowl 50 have been called?",
+          "prediction": "Super Bowl L",
+          "references": [
+            "Super Bowl L",
+            "L",
+            "Super Bowl L"
+          ],
+          "confidence": 0.7994618011178858,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 361.82450014166534
+        },
+        {
+          "id": "56beace93aeaaa14008c91e3",
+          "question": "Super Bowl 50 decided the NFL champion for what season?",
+          "prediction": "2015",
+          "references": [
+            "2015",
+            "the 2015 season",
+            "2015"
+          ],
+          "confidence": 0.9101781588459126,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 261.3001000136137
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94fd",
+          "question": "What year did the Denver Broncos secure a Super Bowl title for the third time?",
+          "prediction": "2016",
+          "references": [
+            "2015",
+            "2016",
+            "2015"
+          ],
+          "confidence": 0.8503891190652837,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 246.80740013718605
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94fe",
+          "question": "What city did Super Bowl 50 take place in?",
+          "prediction": "Santa Clara, California",
+          "references": [
+            "Santa Clara",
+            "Santa Clara",
+            "Santa Clara"
+          ],
+          "confidence": 0.34218074247490904,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 318.5125000309199
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94ff",
+          "question": "What stadium did Super Bowl 50 take place in?",
+          "prediction": "Levi's Stadium",
+          "references": [
+            "Levi's Stadium",
+            "Levi's Stadium",
+            "Levi's Stadium"
+          ],
+          "confidence": 0.9881967727087186,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 343.63300004042685
+        },
+        {
+          "id": "56bf10f43aeaaa14008c9500",
+          "question": "What was the final score of Super Bowl 50?",
+          "prediction": "24–10",
+          "references": [
+            "24–10",
+            "24–10",
+            "24–10"
+          ],
+          "confidence": 0.5747432183291146,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 281.5000999253243
+        },
+        {
+          "id": "56bf10f43aeaaa14008c9501",
+          "question": "What month, day and year did Super Bowl 50 take place?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7, 2016",
+            "February 7, 2016"
+          ],
+          "confidence": 0.4929944215988087,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 240.8102999906987
+        },
+        {
+          "id": "56d20362e7d4791d009025e8",
+          "question": "What year was Super Bowl 50?",
+          "prediction": "2015",
+          "references": [
+            "2015",
+            "2016",
+            "2016"
+          ],
+          "confidence": 0.964958064148103,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 273.35870009846985
+        },
+        {
+          "id": "56d20362e7d4791d009025e9",
+          "question": "What team was the AFC champion?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.498688511182138,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 305.2705000154674
+        },
+        {
+          "id": "56d20362e7d4791d009025ea",
+          "question": "What team was the NFC champion?",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Carolina Panthers",
+            "Carolina Panthers",
+            "Carolina Panthers"
+          ],
+          "confidence": 0.888915994623126,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 263.8540999032557
+        },
+        {
+          "id": "56d20362e7d4791d009025eb",
+          "question": "Who won Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.5561252055285024,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 326.3236000202596
+        },
+        {
+          "id": "56d600e31c85041400946eae",
+          "question": "Super Bowl 50 determined the NFL champion for what season?",
+          "prediction": "2015",
+          "references": [
+            "2015",
+            "the 2015 season",
+            "2015"
+          ],
+          "confidence": 0.9048232912658989,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 348.44779991544783
+        },
+        {
+          "id": "56d600e31c85041400946eb0",
+          "question": "Which team won Super Bowl 50.",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.4555957127197985,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 331.4410999882966
+        },
+        {
+          "id": "56d600e31c85041400946eb1",
+          "question": "Where was Super Bowl 50 held?",
+          "prediction": "Levi's Stadium",
+          "references": [
+            "Santa Clara, California.",
+            "Levi's Stadium",
+            "Levi's Stadium"
+          ],
+          "confidence": 0.40585751561501127,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 292.636499973014
+        },
+        {
+          "id": "56d9895ddc89441400fdb50e",
+          "question": "The name of the NFL championship game is?",
+          "prediction": "Super Bowl 50",
+          "references": [
+            "Super Bowl",
+            "Super Bowl",
+            "Super Bowl"
+          ],
+          "confidence": 0.9787583164732183,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 363.8230999931693
+        },
+        {
+          "id": "56d9895ddc89441400fdb510",
+          "question": "What 2015 NFL team one the AFC playoff?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.4108074616782815,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 266.2303000688553
+        },
+        {
+          "id": "56be4e1facb8001400a502f6",
+          "question": "Which Carolina Panthers player was named Most Valuable Player?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.6958344675026211,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 140.76499990187585
+        },
+        {
+          "id": "56be4e1facb8001400a502f9",
+          "question": "How many appearances have the Denver Broncos made in the Super Bowl?",
+          "prediction": "eight",
+          "references": [
+            "8",
+            "eight",
+            "eight"
+          ],
+          "confidence": 0.4799389201019899,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 206.64410013705492
+        },
+        {
+          "id": "56be4e1facb8001400a502fa",
+          "question": "What year was the Carolina Panthers franchise founded?",
+          "prediction": "1995",
+          "references": [
+            "1995",
+            "1995",
+            "1995"
+          ],
+          "confidence": 0.9968145168126625,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 277.1995000075549
+        },
+        {
+          "id": "56beaa4a3aeaaa14008c91c2",
+          "question": "What team did the Panthers defeat?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.9266297768781371,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 203.42190004885197
+        },
+        {
+          "id": "56beaa4a3aeaaa14008c91c3",
+          "question": "Who did the Broncos prevent from going to the Super Bowl?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.7923850886347772,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 161.57219978049397
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91e9",
+          "question": "Who did the Panthers beat in the NFC Championship Game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8749803188369825,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 165.13249999843538
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ea",
+          "question": "Who lost to the Broncos in the AFC Championship?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.3816850078365519,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 244.81409997679293
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91eb",
+          "question": "Who were the defending Super Bowl champions?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.9155867367587511,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 233.5415999405086
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ec",
+          "question": "How many teams have been in the Super Bowl eight times?",
+          "prediction": "four",
+          "references": [
+            "four",
+            "four",
+            "four"
+          ],
+          "confidence": 0.8133524772825815,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 240.75270001776516
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ed",
+          "question": "Who was this season's NFL MVP?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.8565137806231249,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 298.642200184986
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9507",
+          "question": "What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?",
+          "prediction": "15–1",
+          "references": [
+            "15–1",
+            "15–1",
+            "15–1"
+          ],
+          "confidence": 0.6969131629410157,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 213.41249998658895
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9508",
+          "question": "Which Carolina Panthers team member was picked as the team's MVP in 2015?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.9248031693996701,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 176.5914000570774
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9509",
+          "question": "What were the win/loss game stats for the Denver Bronco's regular season in 2015?",
+          "prediction": "15–1 record",
+          "references": [
+            "12–4",
+            "12–4",
+            "12–4"
+          ],
+          "confidence": 0.1810025508673192,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 203.14969983883202
+        },
+        {
+          "id": "56bf159b3aeaaa14008c950a",
+          "question": "How many teams have played in the Super Bowl eight times?",
+          "prediction": "four",
+          "references": [
+            "4",
+            "four",
+            "four"
+          ],
+          "confidence": 0.8104194782477947,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 252.77910009026527
+        },
+        {
+          "id": "56bf159b3aeaaa14008c950b",
+          "question": "Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.909153428870713,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 281.59140003845096
+        },
+        {
+          "id": "56d2045de7d4791d009025f3",
+          "question": "Who is the quarterback for the Panthers?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.9911033073533986,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 168.74839994125068
+        },
+        {
+          "id": "56d2045de7d4791d009025f4",
+          "question": "Who did Carolina beat in the NFC championship game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8989319557474893,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 220.58960003778338
+        },
+        {
+          "id": "56d2045de7d4791d009025f5",
+          "question": "How many times have the Panthers been in the Super Bowl?",
+          "prediction": "eight",
+          "references": [
+            "2",
+            "second",
+            "second"
+          ],
+          "confidence": 0.3509820323447457,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 169.46929995901883
+        },
+        {
+          "id": "56d2045de7d4791d009025f6",
+          "question": "Who did Denver beat in the AFC championship?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.8961730545109674,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 142.5477999728173
+        },
+        {
+          "id": "56d6017d1c85041400946ebe",
+          "question": "Who was the Most Valuable Player for the 2015 NFL season?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.5885562105617623,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 179.0955001488328
+        },
+        {
+          "id": "56d6017d1c85041400946ec1",
+          "question": "Who did Denver beat in the 2015 AFC Championship game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.8907745230105775,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 184.39609999768436
+        },
+        {
+          "id": "56d6017d1c85041400946ec2",
+          "question": "Who did the Carolina Panthers beat in the 2015 NFC Championship game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8952254497832683,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 201.86459994874895
+        },
+        {
+          "id": "56d98a59dc89441400fdb52a",
+          "question": "Who was the 2015 NFL MVP?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.8547546794476659,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 177.85140010528266
+        },
+        {
+          "id": "56d98a59dc89441400fdb52b",
+          "question": "Who did the Panthers beat to become the NFC champs?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8830452890480522,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 218.6451000161469
+        },
+        {
+          "id": "56d98a59dc89441400fdb52e",
+          "question": "What year did the Carolina Panthers form?",
+          "prediction": "1995",
+          "references": [
+            "1995.",
+            "1995",
+            "1995"
+          ],
+          "confidence": 0.9945478142604713,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 161.75259998999536
+        },
+        {
+          "id": "56be4eafacb8001400a50302",
+          "question": "Who was the Super Bowl 50 MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9515244872442565,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 223.5617998521775
+        },
+        {
+          "id": "56be4eafacb8001400a50303",
+          "question": "How many fumbles did Von Miller force in Super Bowl 50?",
+          "prediction": "two",
+          "references": [
+            "2",
+            "two",
+            "two"
+          ],
+          "confidence": 0.9187549627457514,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 130.82049996592104
+        },
+        {
+          "id": "56be4eafacb8001400a50304",
+          "question": "Which team held the scoring lead throughout the entire game?",
+          "prediction": "Broncos",
+          "references": [
+            "Broncos",
+            "The Broncos",
+            "Broncos"
+          ],
+          "confidence": 0.6989719836917061,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 189.95420006103814
+        },
+        {
+          "id": "56beab833aeaaa14008c91d2",
+          "question": "Which Denver linebacker was named Super Bowl MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "linebacker Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9926842559459921,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 174.34190004132688
+        },
+        {
+          "id": "56beab833aeaaa14008c91d3",
+          "question": "How many solo tackles did Von Miller make at Super Bowl 50?",
+          "prediction": "five",
+          "references": [
+            "five solo tackles",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9629821126102556,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 148.52930000051856
+        },
+        {
+          "id": "56beab833aeaaa14008c91d4",
+          "question": "Who was limited by Denver's defense?",
+          "prediction": "Newton",
+          "references": [
+            "Newton was limited by Denver's defense",
+            "Newton",
+            "Newton"
+          ],
+          "confidence": 0.9923030352558726,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 145.22870001383126
+        },
+        {
+          "id": "56beae423aeaaa14008c91f4",
+          "question": "How many times was Cam Newton sacked?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.7493349949108961,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 165.9133001230657
+        },
+        {
+          "id": "56beae423aeaaa14008c91f5",
+          "question": "Who won the Super Bowl MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "The Broncos",
+            "Miller"
+          ],
+          "confidence": 0.8682678837742941,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 208.0939000006765
+        },
+        {
+          "id": "56beae423aeaaa14008c91f6",
+          "question": "How many turnovers did Cam Newton have?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.7401262364347332,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 188.86679993011057
+        },
+        {
+          "id": "56beae423aeaaa14008c91f7",
+          "question": "How many fumbles did Von Miller force?",
+          "prediction": "two",
+          "references": [
+            "two",
+            "two",
+            "two"
+          ],
+          "confidence": 0.9269248092700089,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 190.14300010167062
+        },
+        {
+          "id": "56bf17653aeaaa14008c9511",
+          "question": "Who was given the esteemed status of MVP for Super Bowl 50?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9667301742087417,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 210.14630002900958
+        },
+        {
+          "id": "56bf17653aeaaa14008c9513",
+          "question": "What position does Von Miller play for the Denver Broncos?",
+          "prediction": "linebacker",
+          "references": [
+            "linebacker",
+            "linebacker",
+            "linebacker"
+          ],
+          "confidence": 0.960651342436762,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 188.81059996783733
+        },
+        {
+          "id": "56bf17653aeaaa14008c9514",
+          "question": "What was the number of solo tackles that Von Miller had in Super Bowl 50?",
+          "prediction": "five",
+          "references": [
+            "5",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9607034985930873,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 208.2573000807315
+        },
+        {
+          "id": "56bf17653aeaaa14008c9515",
+          "question": "How many forced fumbles did Von Miller have during the Super Bowl 50 game?",
+          "prediction": "two",
+          "references": [
+            "2",
+            "two",
+            "two"
+          ],
+          "confidence": 0.9576345089558913,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 218.2658000383526
+        },
+        {
+          "id": "56d204ade7d4791d00902603",
+          "question": "Who won the MVP for the Super Bowl?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.8850468146305843,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 165.92749999836087
+        },
+        {
+          "id": "56d204ade7d4791d00902604",
+          "question": "How many tackles did Von Miller get during the game?",
+          "prediction": "five",
+          "references": [
+            "5",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9277596064052887,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 207.73099991492927
+        },
+        {
+          "id": "56d601e41c85041400946ece",
+          "question": "How many times was Cam Newton sacked in Super Bowl 50?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.7387804959585438,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 203.95109988749027
+        },
+        {
+          "id": "56d601e41c85041400946ecf",
+          "question": "How many times did the Denver defense force Newton into turnovers?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.5686943985573123,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 211.55570005066693
+        },
+        {
+          "id": "56d601e41c85041400946ed0",
+          "question": "Which Newton turnover resulted in seven points for Denver?",
+          "prediction": "a fumble",
+          "references": [
+            "a fumble",
+            "a fumble",
+            "fumble"
+          ],
+          "confidence": 0.4610137102049805,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 135.41889982298017
+        },
+        {
+          "id": "56d601e41c85041400946ed1",
+          "question": "Who was the Most Valuable Player of Super Bowl 50?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.8269979974169388,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 86.76850004121661
+        },
+        {
+          "id": "56d601e41c85041400946ed2",
+          "question": "What position does Von Miller play?",
+          "prediction": "linebacker",
+          "references": [
+            "linebacker",
+            "linebacker",
+            "linebacker"
+          ],
+          "confidence": 0.9487565539600951,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 160.83110007457435
+        },
+        {
+          "id": "56d98b33dc89441400fdb53b",
+          "question": "How many times was the Panthers' quarterback sacked?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.6973707783641956,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 113.74590010382235
+        },
+        {
+          "id": "56d98b33dc89441400fdb53c",
+          "question": "How many times did the Broncos cause turnovers in the game?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.5892974646471529,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 87.57570013403893
+        },
+        {
+          "id": "56d98b33dc89441400fdb53d",
+          "question": "What Denver player caused two fumbles for the Panthers?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.963213453684034,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 96.61330003291368
+        },
+        {
+          "id": "56d98b33dc89441400fdb53e",
+          "question": "How many tackles did Von Miller accomlish by himself in the game?",
+          "prediction": "five",
+          "references": [
+            "five",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9217304288745432,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 79.79199988767505
+        },
+        {
+          "id": "56be5333acb8001400a5030a",
+          "question": "Which network broadcasted Super Bowl 50 in the U.S.?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9988691520862858,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 215.30829998664558
+        },
+        {
+          "id": "56be5333acb8001400a5030b",
+          "question": "What was the average cost for a 30 second commercial during Super Bowl 50?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9803837226840884,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 266.51689992286265
+        },
+        {
+          "id": "56be5333acb8001400a5030c",
+          "question": "Which group headlined the Super Bowl 50 halftime show?",
+          "prediction": "Coldplay",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.9906581197587911,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 181.95379991084337
+        },
+        {
+          "id": "56be5333acb8001400a5030d",
+          "question": "Which performers joined the headliner during the Super Bowl 50 halftime show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars"
+          ],
+          "confidence": 0.9902825704680325,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 208.105499856174
+        },
+        {
+          "id": "56be5333acb8001400a5030e",
+          "question": "At which Super Bowl did Beyonce headline the halftime show?",
+          "prediction": "Super Bowl 50",
+          "references": [
+            "Super Bowl XLVII",
+            "Super Bowl XLVII",
+            "XLVII"
+          ],
+          "confidence": 0.46719516031071606,
+          "exact_match": 0.0,
+          "f1": 0.6666666666666666,
+          "latency_ms": 139.22619982622564
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91fd",
+          "question": "Who was the broadcaster for Super Bowl 50 in the United States?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9985797447163769,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 139.13380005396903
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91fe",
+          "question": "What was the average cost of a 30-second commercial?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9815032555903827,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 219.41250003874302
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91ff",
+          "question": "What halftime performer previously headlined Super Bowl XLVII?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Beyoncé",
+            "Beyoncé",
+            "Beyoncé"
+          ],
+          "confidence": 0.9219682873052975,
+          "exact_match": 0.0,
+          "f1": 0.4,
+          "latency_ms": 170.99370015785098
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c9200",
+          "question": "What halftime performer previously headlined Super Bowl XLVIII?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Bruno Mars",
+            "Bruno Mars",
+            "Mars"
+          ],
+          "confidence": 0.9149585113861747,
+          "exact_match": 0.0,
+          "f1": 0.6666666666666666,
+          "latency_ms": 115.72389979846776
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c9201",
+          "question": "Who was the main performer at this year's halftime show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.8800617816436898,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 147.61709980666637
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951b",
+          "question": "Which network broadcasted the 50th Super Bowl game?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.998305293115223,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 196.6027000453323
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951c",
+          "question": "What was the average cost for a TV ad lasting 30 seconds during Super Bowl 50?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9799910240588225,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 186.64700002409518
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951e",
+          "question": "Who was the male singer who performed as a special guest during Super Bowl 50?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Bruno Mars",
+            "Bruno Mars",
+            "Bruno Mars,"
+          ],
+          "confidence": 0.8689696004401526,
+          "exact_match": 0.0,
+          "f1": 0.6666666666666666,
+          "latency_ms": 210.1241999771446
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951f",
+          "question": "What ranking does the Super Bowl 50 halftime show have on the list of most watched TV broadcasts?",
+          "prediction": "third",
+          "references": [
+            "third",
+            "third",
+            "third"
+          ],
+          "confidence": 0.5674470424723737,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 194.48269996792078
+        },
+        {
+          "id": "56d2051ce7d4791d00902608",
+          "question": "What station aired the Super Bowl?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9993558838028456,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 157.32200001366436
+        },
+        {
+          "id": "56d2051ce7d4791d00902609",
+          "question": "How much money did a 1/2 minute commercial cost?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.8894145977438157,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 217.52279996871948
+        },
+        {
+          "id": "56d2051ce7d4791d0090260a",
+          "question": "What band headlined half-time during Super Bowl 50?",
+          "prediction": "Coldplay",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.9919871154635018,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 204.8290001694113
+        },
+        {
+          "id": "56d2051ce7d4791d0090260b",
+          "question": "What two artists came out with Coldplay during the half-time show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars"
+          ],
+          "confidence": 0.9957820410141132,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 183.40350012294948
+        },
+        {
+          "id": "56d602631c85041400946ed8",
+          "question": "Who broadcast the Super Bowl on TV?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9968511031604628,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 189.72370005212724
+        },
+        {
+          "id": "56d602631c85041400946eda",
+          "question": "Who headlined the halftime show for Super Bowl 50?",
+          "prediction": "Coldplay with special guest performers Beyoncé and Bruno Mars",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.47028163510207577,
+          "exact_match": 0.0,
+          "f1": 0.19999999999999998,
+          "latency_ms": 176.31819983944297
+        }
+      ]
+    },
+    {
+      "model_name": "deepset/minilm-uncased-squad2",
+      "count": 100,
+      "exact_match": 93.0,
+      "f1": 95.92857142857143,
+      "mean_latency_ms": 137.7295430074446,
+      "examples": [
+        {
+          "id": "56be4db0acb8001400a502ec",
+          "question": "Which NFL team represented the AFC at Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.9850287772843913,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 200.3887000028044
+        },
+        {
+          "id": "56be4db0acb8001400a502ed",
+          "question": "Which NFL team represented the NFC at Super Bowl 50?",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Carolina Panthers",
+            "Carolina Panthers",
+            "Carolina Panthers"
+          ],
+          "confidence": 0.9819561961406933,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 185.92140008695424
+        },
+        {
+          "id": "56be4db0acb8001400a502ee",
+          "question": "Where did Super Bowl 50 take place?",
+          "prediction": "Levi's Stadium in the San Francisco Bay Area at Santa Clara, California",
+          "references": [
+            "Santa Clara, California",
+            "Levi's Stadium",
+            "Levi's Stadium in the San Francisco Bay Area at Santa Clara, California."
+          ],
+          "confidence": 0.27931438054833,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 140.37229982204735
+        },
+        {
+          "id": "56be4db0acb8001400a502ef",
+          "question": "Which NFL team won Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.9763596039117459,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 111.18589993566275
+        },
+        {
+          "id": "56be4db0acb8001400a502f0",
+          "question": "What color was used to emphasize the 50th anniversary of the Super Bowl?",
+          "prediction": "gold",
+          "references": [
+            "gold",
+            "gold",
+            "gold"
+          ],
+          "confidence": 0.731736836724167,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 159.0927999932319
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d1",
+          "question": "What was the theme of Super Bowl 50?",
+          "prediction": "golden anniversary",
+          "references": [
+            "\"golden anniversary\"",
+            "gold-themed",
+            "\"golden anniversary"
+          ],
+          "confidence": 0.28865863706321093,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 141.13630005158484
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d2",
+          "question": "What day was the game played on?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7",
+            "February 7, 2016"
+          ],
+          "confidence": 0.9638443090054238,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 117.18479986302555
+        },
+        {
+          "id": "56be8e613aeaaa14008c90d3",
+          "question": "What is the AFC short for?",
+          "prediction": "American Football Conference",
+          "references": [
+            "American Football Conference",
+            "American Football Conference",
+            "American Football Conference"
+          ],
+          "confidence": 0.9737131369767305,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 233.7491000071168
+        },
+        {
+          "id": "56bea9923aeaaa14008c91b9",
+          "question": "What was the theme of Super Bowl 50?",
+          "prediction": "golden anniversary",
+          "references": [
+            "\"golden anniversary\"",
+            "gold-themed",
+            "gold"
+          ],
+          "confidence": 0.28865863706321093,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 272.3685000091791
+        },
+        {
+          "id": "56bea9923aeaaa14008c91ba",
+          "question": "What does AFC stand for?",
+          "prediction": "American Football Conference",
+          "references": [
+            "American Football Conference",
+            "American Football Conference",
+            "American Football Conference"
+          ],
+          "confidence": 0.9829469062556484,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 217.25319977849722
+        },
+        {
+          "id": "56bea9923aeaaa14008c91bb",
+          "question": "What day was the Super Bowl played on?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7",
+            "February 7, 2016"
+          ],
+          "confidence": 0.9567442526325607,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 242.57220001891255
+        },
+        {
+          "id": "56beace93aeaaa14008c91df",
+          "question": "Who won Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.87475273028247,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 161.70370019972324
+        },
+        {
+          "id": "56beace93aeaaa14008c91e0",
+          "question": "What venue did Super Bowl 50 take place in?",
+          "prediction": "Levi's Stadium",
+          "references": [
+            "Levi's Stadium",
+            "Levi's Stadium",
+            "Levi's Stadium in the San Francisco Bay Area at Santa Clara"
+          ],
+          "confidence": 0.6001008162150683,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 127.55229999311268
+        },
+        {
+          "id": "56beace93aeaaa14008c91e1",
+          "question": "What city did Super Bowl 50 take place in?",
+          "prediction": "Santa Clara, California",
+          "references": [
+            "Santa Clara",
+            "Santa Clara",
+            "Santa Clara"
+          ],
+          "confidence": 0.4374282270254639,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 310.2045999839902
+        },
+        {
+          "id": "56beace93aeaaa14008c91e2",
+          "question": "If Roman numerals were used, what would Super Bowl 50 have been called?",
+          "prediction": "Super Bowl L",
+          "references": [
+            "Super Bowl L",
+            "L",
+            "Super Bowl L"
+          ],
+          "confidence": 0.6014968971627468,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 111.57179996371269
+        },
+        {
+          "id": "56beace93aeaaa14008c91e3",
+          "question": "Super Bowl 50 decided the NFL champion for what season?",
+          "prediction": "2015",
+          "references": [
+            "2015",
+            "the 2015 season",
+            "2015"
+          ],
+          "confidence": 0.9256042917797203,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 163.7677000835538
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94fd",
+          "question": "What year did the Denver Broncos secure a Super Bowl title for the third time?",
+          "prediction": "2016",
+          "references": [
+            "2015",
+            "2016",
+            "2015"
+          ],
+          "confidence": 0.9388983332969616,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 178.68159990757704
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94fe",
+          "question": "What city did Super Bowl 50 take place in?",
+          "prediction": "Santa Clara, California",
+          "references": [
+            "Santa Clara",
+            "Santa Clara",
+            "Santa Clara"
+          ],
+          "confidence": 0.4374282270254639,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 227.26149996742606
+        },
+        {
+          "id": "56bf10f43aeaaa14008c94ff",
+          "question": "What stadium did Super Bowl 50 take place in?",
+          "prediction": "Levi's Stadium",
+          "references": [
+            "Levi's Stadium",
+            "Levi's Stadium",
+            "Levi's Stadium"
+          ],
+          "confidence": 0.8790289338211466,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 305.157900089398
+        },
+        {
+          "id": "56bf10f43aeaaa14008c9500",
+          "question": "What was the final score of Super Bowl 50?",
+          "prediction": "24–10",
+          "references": [
+            "24–10",
+            "24–10",
+            "24–10"
+          ],
+          "confidence": 0.9471010729358618,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 221.9168001320213
+        },
+        {
+          "id": "56bf10f43aeaaa14008c9501",
+          "question": "What month, day and year did Super Bowl 50 take place?",
+          "prediction": "February 7, 2016",
+          "references": [
+            "February 7, 2016",
+            "February 7, 2016",
+            "February 7, 2016"
+          ],
+          "confidence": 0.798339691672524,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 112.96589998528361
+        },
+        {
+          "id": "56d20362e7d4791d009025e8",
+          "question": "What year was Super Bowl 50?",
+          "prediction": "2016",
+          "references": [
+            "2015",
+            "2016",
+            "2016"
+          ],
+          "confidence": 0.5194313270787738,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 225.784300127998
+        },
+        {
+          "id": "56d20362e7d4791d009025e9",
+          "question": "What team was the AFC champion?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.9887997816536966,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 267.13870000094175
+        },
+        {
+          "id": "56d20362e7d4791d009025ea",
+          "question": "What team was the NFC champion?",
+          "prediction": "Carolina Panthers",
+          "references": [
+            "Carolina Panthers",
+            "Carolina Panthers",
+            "Carolina Panthers"
+          ],
+          "confidence": 0.9844868743495283,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 122.01910000294447
+        },
+        {
+          "id": "56d20362e7d4791d009025eb",
+          "question": "Who won Super Bowl 50?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.87475273028247,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 282.815600046888
+        },
+        {
+          "id": "56d600e31c85041400946eae",
+          "question": "Super Bowl 50 determined the NFL champion for what season?",
+          "prediction": "2015",
+          "references": [
+            "2015",
+            "the 2015 season",
+            "2015"
+          ],
+          "confidence": 0.9099282791300567,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 205.1949999295175
+        },
+        {
+          "id": "56d600e31c85041400946eb0",
+          "question": "Which team won Super Bowl 50.",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.9704097705261105,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 150.9227000642568
+        },
+        {
+          "id": "56d600e31c85041400946eb1",
+          "question": "Where was Super Bowl 50 held?",
+          "prediction": "Levi's Stadium in the San Francisco Bay Area at Santa Clara, California",
+          "references": [
+            "Santa Clara, California.",
+            "Levi's Stadium",
+            "Levi's Stadium"
+          ],
+          "confidence": 0.2786214563136298,
+          "exact_match": 0.0,
+          "f1": 0.42857142857142855,
+          "latency_ms": 109.94550003670156
+        },
+        {
+          "id": "56d9895ddc89441400fdb50e",
+          "question": "The name of the NFL championship game is?",
+          "prediction": "Super Bowl 50",
+          "references": [
+            "Super Bowl",
+            "Super Bowl",
+            "Super Bowl"
+          ],
+          "confidence": 0.9841656488988129,
+          "exact_match": 0.0,
+          "f1": 0.8,
+          "latency_ms": 222.0556999091059
+        },
+        {
+          "id": "56d9895ddc89441400fdb510",
+          "question": "What 2015 NFL team one the AFC playoff?",
+          "prediction": "Denver Broncos",
+          "references": [
+            "Denver Broncos",
+            "Denver Broncos",
+            "Denver Broncos"
+          ],
+          "confidence": 0.944104005773795,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 208.5786999668926
+        },
+        {
+          "id": "56be4e1facb8001400a502f6",
+          "question": "Which Carolina Panthers player was named Most Valuable Player?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.943453286342276,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 121.08780001290143
+        },
+        {
+          "id": "56be4e1facb8001400a502f9",
+          "question": "How many appearances have the Denver Broncos made in the Super Bowl?",
+          "prediction": "eight",
+          "references": [
+            "8",
+            "eight",
+            "eight"
+          ],
+          "confidence": 0.021587824826799995,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 104.02359999716282
+        },
+        {
+          "id": "56be4e1facb8001400a502fa",
+          "question": "What year was the Carolina Panthers franchise founded?",
+          "prediction": "1995",
+          "references": [
+            "1995",
+            "1995",
+            "1995"
+          ],
+          "confidence": 0.994735106516103,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 135.10040007531643
+        },
+        {
+          "id": "56beaa4a3aeaaa14008c91c2",
+          "question": "What team did the Panthers defeat?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.932147427835428,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 195.09040005505085
+        },
+        {
+          "id": "56beaa4a3aeaaa14008c91c3",
+          "question": "Who did the Broncos prevent from going to the Super Bowl?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.7230540939278427,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 154.35590012930334
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91e9",
+          "question": "Who did the Panthers beat in the NFC Championship Game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8239700395912593,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 43.43910003080964
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ea",
+          "question": "Who lost to the Broncos in the AFC Championship?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.6938319682395111,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 40.73560005053878
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91eb",
+          "question": "Who were the defending Super Bowl champions?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.7164300280035363,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 39.2299999948591
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ec",
+          "question": "How many teams have been in the Super Bowl eight times?",
+          "prediction": "four",
+          "references": [
+            "four",
+            "four",
+            "four"
+          ],
+          "confidence": 0.8044919844355292,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 88.75350002199411
+        },
+        {
+          "id": "56bead5a3aeaaa14008c91ed",
+          "question": "Who was this season's NFL MVP?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.831786150016903,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 107.87860001437366
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9507",
+          "question": "What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?",
+          "prediction": "15–1",
+          "references": [
+            "15–1",
+            "15–1",
+            "15–1"
+          ],
+          "confidence": 0.8307421448704133,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 157.1043999865651
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9508",
+          "question": "Which Carolina Panthers team member was picked as the team's MVP in 2015?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.9431223205078538,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 227.53209993243217
+        },
+        {
+          "id": "56bf159b3aeaaa14008c9509",
+          "question": "What were the win/loss game stats for the Denver Bronco's regular season in 2015?",
+          "prediction": "12–4",
+          "references": [
+            "12–4",
+            "12–4",
+            "12–4"
+          ],
+          "confidence": 0.49548405035693577,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 224.05930003151298
+        },
+        {
+          "id": "56bf159b3aeaaa14008c950a",
+          "question": "How many teams have played in the Super Bowl eight times?",
+          "prediction": "four",
+          "references": [
+            "4",
+            "four",
+            "four"
+          ],
+          "confidence": 0.8498648801979556,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 158.2715001422912
+        },
+        {
+          "id": "56bf159b3aeaaa14008c950b",
+          "question": "Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.6664016277478595,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 131.74950005486608
+        },
+        {
+          "id": "56d2045de7d4791d009025f3",
+          "question": "Who is the quarterback for the Panthers?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.985967402693781,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 120.56740000844002
+        },
+        {
+          "id": "56d2045de7d4791d009025f4",
+          "question": "Who did Carolina beat in the NFC championship game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.8485330059443328,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 83.70910002849996
+        },
+        {
+          "id": "56d2045de7d4791d009025f5",
+          "question": "How many times have the Panthers been in the Super Bowl?",
+          "prediction": "second",
+          "references": [
+            "2",
+            "second",
+            "second"
+          ],
+          "confidence": 0.06394493277268154,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 77.93519995175302
+        },
+        {
+          "id": "56d2045de7d4791d009025f6",
+          "question": "Who did Denver beat in the AFC championship?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.6341910904823784,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 62.743799993768334
+        },
+        {
+          "id": "56d6017d1c85041400946ebe",
+          "question": "Who was the Most Valuable Player for the 2015 NFL season?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.8236153856348665,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 137.73169997148216
+        },
+        {
+          "id": "56d6017d1c85041400946ec1",
+          "question": "Who did Denver beat in the 2015 AFC Championship game?",
+          "prediction": "New England Patriots",
+          "references": [
+            "New England Patriots",
+            "the New England Patriots",
+            "New England Patriots"
+          ],
+          "confidence": 0.23404722269158995,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 225.16730008646846
+        },
+        {
+          "id": "56d6017d1c85041400946ec2",
+          "question": "Who did the Carolina Panthers beat in the 2015 NFC Championship game?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.7935826843167852,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 178.32910013385117
+        },
+        {
+          "id": "56d98a59dc89441400fdb52a",
+          "question": "Who was the 2015 NFL MVP?",
+          "prediction": "Cam Newton",
+          "references": [
+            "Cam Newton",
+            "Cam Newton",
+            "Cam Newton"
+          ],
+          "confidence": 0.856107841164544,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 208.69260001927614
+        },
+        {
+          "id": "56d98a59dc89441400fdb52b",
+          "question": "Who did the Panthers beat to become the NFC champs?",
+          "prediction": "Arizona Cardinals",
+          "references": [
+            "Arizona Cardinals",
+            "the Arizona Cardinals",
+            "Arizona Cardinals"
+          ],
+          "confidence": 0.887025002798385,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 203.1471999362111
+        },
+        {
+          "id": "56d98a59dc89441400fdb52e",
+          "question": "What year did the Carolina Panthers form?",
+          "prediction": "1995",
+          "references": [
+            "1995.",
+            "1995",
+            "1995"
+          ],
+          "confidence": 0.9785333646500476,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 169.6676998399198
+        },
+        {
+          "id": "56be4eafacb8001400a50302",
+          "question": "Who was the Super Bowl 50 MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9479177557607521,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 30.25539987720549
+        },
+        {
+          "id": "56be4eafacb8001400a50303",
+          "question": "How many fumbles did Von Miller force in Super Bowl 50?",
+          "prediction": "two",
+          "references": [
+            "2",
+            "two",
+            "two"
+          ],
+          "confidence": 0.8982331603695926,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 85.68120002746582
+        },
+        {
+          "id": "56be4eafacb8001400a50304",
+          "question": "Which team held the scoring lead throughout the entire game?",
+          "prediction": "The Broncos",
+          "references": [
+            "Broncos",
+            "The Broncos",
+            "Broncos"
+          ],
+          "confidence": 0.039601520074701746,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 138.19249998778105
+        },
+        {
+          "id": "56beab833aeaaa14008c91d2",
+          "question": "Which Denver linebacker was named Super Bowl MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "linebacker Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9909046890644966,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 80.6468001101166
+        },
+        {
+          "id": "56beab833aeaaa14008c91d3",
+          "question": "How many solo tackles did Von Miller make at Super Bowl 50?",
+          "prediction": "five",
+          "references": [
+            "five solo tackles",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9645230817875934,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 31.67219995521009
+        },
+        {
+          "id": "56beab833aeaaa14008c91d4",
+          "question": "Who was limited by Denver's defense?",
+          "prediction": "Newton",
+          "references": [
+            "Newton was limited by Denver's defense",
+            "Newton",
+            "Newton"
+          ],
+          "confidence": 0.9897374817956717,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 99.18639995157719
+        },
+        {
+          "id": "56beae423aeaaa14008c91f4",
+          "question": "How many times was Cam Newton sacked?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.7963459189797994,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 62.73290002718568
+        },
+        {
+          "id": "56beae423aeaaa14008c91f5",
+          "question": "Who won the Super Bowl MVP?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "The Broncos",
+            "Miller"
+          ],
+          "confidence": 0.9154889019131645,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 128.49410017952323
+        },
+        {
+          "id": "56beae423aeaaa14008c91f6",
+          "question": "How many turnovers did Cam Newton have?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.9143070993522144,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 141.13910007290542
+        },
+        {
+          "id": "56beae423aeaaa14008c91f7",
+          "question": "How many fumbles did Von Miller force?",
+          "prediction": "two",
+          "references": [
+            "two",
+            "two",
+            "two"
+          ],
+          "confidence": 0.9286157825089774,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 79.61850007995963
+        },
+        {
+          "id": "56bf17653aeaaa14008c9511",
+          "question": "Who was given the esteemed status of MVP for Super Bowl 50?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Miller"
+          ],
+          "confidence": 0.9559008184994475,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 58.425899827852845
+        },
+        {
+          "id": "56bf17653aeaaa14008c9513",
+          "question": "What position does Von Miller play for the Denver Broncos?",
+          "prediction": "linebacker",
+          "references": [
+            "linebacker",
+            "linebacker",
+            "linebacker"
+          ],
+          "confidence": 0.9935749993735499,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 91.34359983727336
+        },
+        {
+          "id": "56bf17653aeaaa14008c9514",
+          "question": "What was the number of solo tackles that Von Miller had in Super Bowl 50?",
+          "prediction": "five",
+          "references": [
+            "5",
+            "five",
+            "five"
+          ],
+          "confidence": 0.9676422781626215,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 66.77829986438155
+        },
+        {
+          "id": "56bf17653aeaaa14008c9515",
+          "question": "How many forced fumbles did Von Miller have during the Super Bowl 50 game?",
+          "prediction": "two",
+          "references": [
+            "2",
+            "two",
+            "two"
+          ],
+          "confidence": 0.9315064648386517,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 76.71809988096356
+        },
+        {
+          "id": "56d204ade7d4791d00902603",
+          "question": "Who won the MVP for the Super Bowl?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.9486473878792197,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 72.16440001502633
+        },
+        {
+          "id": "56d204ade7d4791d00902604",
+          "question": "How many tackles did Von Miller get during the game?",
+          "prediction": "five",
+          "references": [
+            "5",
+            "five",
+            "five"
+          ],
+          "confidence": 0.8847235427650446,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 27.195099974051118
+        },
+        {
+          "id": "56d601e41c85041400946ece",
+          "question": "How many times was Cam Newton sacked in Super Bowl 50?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.7357241649828765,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 30.882699880748987
+        },
+        {
+          "id": "56d601e41c85041400946ecf",
+          "question": "How many times did the Denver defense force Newton into turnovers?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.954267598185119,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 66.39719987288117
+        },
+        {
+          "id": "56d601e41c85041400946ed0",
+          "question": "Which Newton turnover resulted in seven points for Denver?",
+          "prediction": "Newton was limited by Denver's defense, which sacked him seven times and forced him into three turnovers, including a fumble",
+          "references": [
+            "a fumble",
+            "a fumble",
+            "fumble"
+          ],
+          "confidence": 5.22060626045027e-05,
+          "exact_match": 0.0,
+          "f1": 0.1,
+          "latency_ms": 105.1285001449287
+        },
+        {
+          "id": "56d601e41c85041400946ed1",
+          "question": "Who was the Most Valuable Player of Super Bowl 50?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.9344311468867161,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 46.45300004631281
+        },
+        {
+          "id": "56d601e41c85041400946ed2",
+          "question": "What position does Von Miller play?",
+          "prediction": "linebacker",
+          "references": [
+            "linebacker",
+            "linebacker",
+            "linebacker"
+          ],
+          "confidence": 0.9825977307077878,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 64.60480019450188
+        },
+        {
+          "id": "56d98b33dc89441400fdb53b",
+          "question": "How many times was the Panthers' quarterback sacked?",
+          "prediction": "seven",
+          "references": [
+            "seven",
+            "seven",
+            "seven"
+          ],
+          "confidence": 0.6901004416909515,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 124.45790017955005
+        },
+        {
+          "id": "56d98b33dc89441400fdb53c",
+          "question": "How many times did the Broncos cause turnovers in the game?",
+          "prediction": "three",
+          "references": [
+            "three",
+            "three",
+            "three"
+          ],
+          "confidence": 0.9088543967682199,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 143.2667998597026
+        },
+        {
+          "id": "56d98b33dc89441400fdb53d",
+          "question": "What Denver player caused two fumbles for the Panthers?",
+          "prediction": "Von Miller",
+          "references": [
+            "Von Miller",
+            "Von Miller",
+            "Von Miller"
+          ],
+          "confidence": 0.9820573002025412,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 142.70030008628964
+        },
+        {
+          "id": "56d98b33dc89441400fdb53e",
+          "question": "How many tackles did Von Miller accomlish by himself in the game?",
+          "prediction": "five",
+          "references": [
+            "five",
+            "five",
+            "five"
+          ],
+          "confidence": 0.907286375587546,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 130.46230003237724
+        },
+        {
+          "id": "56be5333acb8001400a5030a",
+          "question": "Which network broadcasted Super Bowl 50 in the U.S.?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9924749636498262,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 34.41510000266135
+        },
+        {
+          "id": "56be5333acb8001400a5030b",
+          "question": "What was the average cost for a 30 second commercial during Super Bowl 50?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9484924499766443,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 162.870500003919
+        },
+        {
+          "id": "56be5333acb8001400a5030c",
+          "question": "Which group headlined the Super Bowl 50 halftime show?",
+          "prediction": "Coldplay",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.9869551754529056,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 47.00200003571808
+        },
+        {
+          "id": "56be5333acb8001400a5030d",
+          "question": "Which performers joined the headliner during the Super Bowl 50 halftime show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars"
+          ],
+          "confidence": 0.9664533906079313,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 108.33930014632642
+        },
+        {
+          "id": "56be5333acb8001400a5030e",
+          "question": "At which Super Bowl did Beyonce headline the halftime show?",
+          "prediction": "Super Bowl XLVII",
+          "references": [
+            "Super Bowl XLVII",
+            "Super Bowl XLVII",
+            "XLVII"
+          ],
+          "confidence": 0.3564458965878643,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 168.11629990115762
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91fd",
+          "question": "Who was the broadcaster for Super Bowl 50 in the United States?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9922503406641958,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 35.129399970173836
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91fe",
+          "question": "What was the average cost of a 30-second commercial?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9637557852809664,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 83.86210002936423
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c91ff",
+          "question": "What halftime performer previously headlined Super Bowl XLVII?",
+          "prediction": "Bruno Mars",
+          "references": [
+            "Beyoncé",
+            "Beyoncé",
+            "Beyoncé"
+          ],
+          "confidence": 0.6331020649746577,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 209.01359990239143
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c9200",
+          "question": "What halftime performer previously headlined Super Bowl XLVIII?",
+          "prediction": "Bruno Mars",
+          "references": [
+            "Bruno Mars",
+            "Bruno Mars",
+            "Mars"
+          ],
+          "confidence": 0.7725243804608652,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 169.6328001562506
+        },
+        {
+          "id": "56beaf5e3aeaaa14008c9201",
+          "question": "Who was the main performer at this year's halftime show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.3242255854061682,
+          "exact_match": 0.0,
+          "f1": 0.0,
+          "latency_ms": 179.79810014367104
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951b",
+          "question": "Which network broadcasted the 50th Super Bowl game?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9893863741568083,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 192.68590002320707
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951c",
+          "question": "What was the average cost for a TV ad lasting 30 seconds during Super Bowl 50?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.9406100669436057,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 114.65019988827407
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951e",
+          "question": "Who was the male singer who performed as a special guest during Super Bowl 50?",
+          "prediction": "Bruno Mars",
+          "references": [
+            "Bruno Mars",
+            "Bruno Mars",
+            "Bruno Mars,"
+          ],
+          "confidence": 0.7074847544267442,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 95.13029991649091
+        },
+        {
+          "id": "56bf1ae93aeaaa14008c951f",
+          "question": "What ranking does the Super Bowl 50 halftime show have on the list of most watched TV broadcasts?",
+          "prediction": "third",
+          "references": [
+            "third",
+            "third",
+            "third"
+          ],
+          "confidence": 0.7330004587959706,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 174.31719996966422
+        },
+        {
+          "id": "56d2051ce7d4791d00902608",
+          "question": "What station aired the Super Bowl?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.9863697572917545,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 99.95310008525848
+        },
+        {
+          "id": "56d2051ce7d4791d00902609",
+          "question": "How much money did a 1/2 minute commercial cost?",
+          "prediction": "$5 million",
+          "references": [
+            "$5 million",
+            "$5 million",
+            "$5 million"
+          ],
+          "confidence": 0.6802854575053345,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 39.352199994027615
+        },
+        {
+          "id": "56d2051ce7d4791d0090260a",
+          "question": "What band headlined half-time during Super Bowl 50?",
+          "prediction": "Coldplay",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.9892500732114016,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 74.74240008741617
+        },
+        {
+          "id": "56d2051ce7d4791d0090260b",
+          "question": "What two artists came out with Coldplay during the half-time show?",
+          "prediction": "Beyoncé and Bruno Mars",
+          "references": [
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars",
+            "Beyoncé and Bruno Mars"
+          ],
+          "confidence": 0.9704357643989141,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 190.55419997312129
+        },
+        {
+          "id": "56d602631c85041400946ed8",
+          "question": "Who broadcast the Super Bowl on TV?",
+          "prediction": "CBS",
+          "references": [
+            "CBS",
+            "CBS",
+            "CBS"
+          ],
+          "confidence": 0.973907758176388,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 174.7946001123637
+        },
+        {
+          "id": "56d602631c85041400946eda",
+          "question": "Who headlined the halftime show for Super Bowl 50?",
+          "prediction": "Coldplay",
+          "references": [
+            "Coldplay",
+            "Coldplay",
+            "Coldplay"
+          ],
+          "confidence": 0.9127567470331606,
+          "exact_match": 1.0,
+          "f1": 1.0,
+          "latency_ms": 161.4298999775201
+        }
+      ]
+    }
+  ]
+}
